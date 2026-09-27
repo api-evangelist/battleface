@@ -1,23 +1,80 @@
 aid: battleface
+
 name: Battleface
-description: 'Battleface is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+image: https://www.battleface.com/wp-content/uploads/2024/07/travel-insurance-built-just-for-you.jpg
+
+description: 'Battleface provides travel insurance and assistance services for adventurers and everyday travelers worldwide. Founded in the UK, it has expanded to the US, Canada, Australia and beyond, offering single‑trip, multi‑trip and annual plans with 24/7 support, medical evacuation, baggage protection and more. The company emphasizes digital claims, a partner network, and a mission to make travel insurance simple and reliable for customers across the globe.'
+
 url: https://raw.githubusercontent.com/api-evangelist/battleface/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-27 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-27'
+
 modified: '2026-09-27'
+
 tags:
-- Company
-apis: []
+- Travel
+- Insurance
+- Adventure
+- DigitalClaims
+- Global
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: LLMsTxt
+  url: llms/battleface-llms.txt
+- type: Hosts
+  url: hosts/battleface-hosts.yml
+- type: Vendors
+  url: vendors/battleface-vendors.yml
+- type: Newsroom
+  url: https://www.battleface.com/en-us/media/
+- type: DomainSecurity
+  url: security/battleface-domain-security.yml
 - type: Website
-  url: https://equityzen.com/company/battleface
+  url: https://www.battleface.com
+- type: DeveloperPortal
+  url: https://developers.battleface.com
+- type: Documentation
+  url: https://developers.battleface.com
+- type: APIReference
+  url: https://developers.battleface.com
+- type: Blog
+  url: https://www.battleface.com/blog
+- type: Pricing
+  url: https://www.battleface.com/en-us/benefits/
+- type: TermsOfService
+  url: https://www.battleface.com/en-us/terms-conditions/
+- type: PrivacyPolicy
+  url: https://www.battleface.com/en-us/privacy-policy/
+
+apis: []
+
+x-coverage:
+  state: unreadable
+  reason: js-rendered-docs
+  detail: "Developer portal at https://developers.battleface.com is a Postman-hosted site that renders documentation via JavaScript, preventing machine-readable spec discovery."
+  evidence:
+    - url: https://developers.battleface.com
+      status: 200
+  checked: '2026-09-27'
+x-enrichment:
+  date: '2026-09-27'
+  status: enriched
+  artifacts_added: 8
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local

@@ -1,0 +1,11 @@
+generated: '2026-09-27'
+method: probed
+source: https://www.battleface.com/en-us/privacy-policy/
+signals:
+  data_subject_request:
+    evidence:
+      - source: https://www.battleface.com/en-us/privacy-policy/
+        http_status: 200
+        fetched: "true"
+        quote: "California Residents: Under the California Consumer Privacy Act (CCPA) and California Privacy Rights Act (CPRA), California residents may: Request access to personal information. Opt-out of data sales or sharing. Request deletion of personal data."
+        note: Provides data subject rights for access, opt‑out, and deletion under US state law.
